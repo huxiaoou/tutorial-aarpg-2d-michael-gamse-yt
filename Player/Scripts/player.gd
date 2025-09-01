@@ -24,8 +24,8 @@ func _physics_process(delta: float) -> void:
 
 func set_direction() -> bool:
 	var new_direction: Vector2 = cardinal_direction
-	if direction == Vector2.ZERO:
-		return false
+	# if direction == Vector2.ZERO:
+	# 	return false
 	if direction.y == 0:
 		new_direction = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
 	elif direction.x == 0:

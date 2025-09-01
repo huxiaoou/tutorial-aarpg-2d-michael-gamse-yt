@@ -7,8 +7,6 @@ class_name State_Walk extends State
 func enter() -> void:
 	player.update_animation("walk")
 	
-func exit() -> void:
-	pass
 
 func process(_delta: float) -> State:
 	if player.direction == Vector2.ZERO:
@@ -16,10 +14,4 @@ func process(_delta: float) -> State:
 	player.velocity = player.direction.normalized() * move_speed
 	if player.set_direction():
 		player.update_animation("walk")
-	return null
-	
-func physics(_delta: float) -> State:
-	return null
-	
-func handle_input(_event: InputEvent) -> State:
 	return null
