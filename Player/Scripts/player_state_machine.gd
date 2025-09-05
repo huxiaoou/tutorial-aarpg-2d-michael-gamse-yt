@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	change_state(curr_state.physics(delta))
 
-func __unhandled_input(event: InputEvent):
+func _unhandled_input(event: InputEvent) -> void:
 	change_state(curr_state.handle_input(event))
 
 func initialize(_player: Player) -> void:
