@@ -23,7 +23,7 @@ var invulnerable: bool = false
 func _ready() -> void:
 	state_machine.initialize(self)
 	player = PlayerManager.player
-	hit_box.Damaged.connect(_take_damage)
+	hit_box.damaged.connect(_take_damage)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
